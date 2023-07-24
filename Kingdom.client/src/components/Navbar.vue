@@ -11,19 +11,19 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav ms-auto me-3">
         <li>
-          <router-link :to="{ name: 'About' }" class="btn text-platinum lighten-30 selectable">
+          <router-link :to="{ name: 'FindGame' }" class="btn text-platinum lighten-30 selectable">
             Find a game
           </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'About' }" class="btn text-platinum lighten-30 selectable">
+          <router-link :to="{ name: 'MyGames' }" class="btn text-platinum lighten-30 selectable">
             My games
           </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'About' }" class="btn text-platinum lighten-30 selectable">
+          <router-link :to="{ name: 'Leaderboard' }" class="btn text-platinum lighten-30 selectable">
             Leaderboard
           </router-link>
         </li>
@@ -33,7 +33,7 @@
           </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'About' }" class="btn text-platinum lighten-30 selectable">
+          <router-link :to="{ name: 'HowToPlay' }" class="btn text-platinum lighten-30 selectable">
             How to play
           </router-link>
         </li>

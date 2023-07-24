@@ -21,7 +21,28 @@ const routes = [
     name: 'Account',
     component: loadPage('AccountPage'),
     beforeEnter: authGuard
-  }
+  },
+  {
+    path: '/findGame',
+    name: 'FindGame',
+    component: loadPage('FindGamePage'),
+  },
+  {
+    path: '/myGames',
+    name: 'MyGames',
+    component: loadPage('MyGamesPage'),
+    beforeEnter: authGuard
+  },
+  {
+    path: '/leaderboard',
+    name: 'Leaderboard',
+    component: loadPage('LeaderboardPage'),
+  },
+  {
+    path: '/howToPlay',
+    name: 'HowToPlay',
+    component: loadPage('HowToPlayPage'),
+  },
 ]
 
 export const router = createRouter({
