@@ -7,8 +7,9 @@ CREATE TABLE
         updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Last Update',
         creatorId varchar(255) NOT NULL COMMENT 'Account Id',
         name varchar(255) NOT NULL COMMENT 'Game Name',
-        kingId varchar(255) NOT NULL COMMENT 'King Players Id',
-        rebelId varchar(255) NOT NULL COMMENT 'Rebel Players Id',
-        winnerId varchar(255) NOT NULL COMMENT 'Winners Id',
+        isRanked bool NOT NULL DEFAULT FALSE COMMENT 'Ranked or Not',
+        kingId varchar(255) COMMENT 'King Players Id',
+        rebelId varchar(255) COMMENT 'Rebel Players Id',
+        winnerId varchar(255) COMMENT 'Winners Id',
         mapId INT NOT NULL COMMENT 'Map Id'
     ) default charset utf8 COMMENT '';

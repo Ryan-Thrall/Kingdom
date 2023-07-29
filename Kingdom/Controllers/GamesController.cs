@@ -16,7 +16,7 @@ public class GamesController : ControllerBase
 
   [Authorize]
   [HttpPost]
-  public async Task<ActionResult<Game>> CreateGame([FromBody] Game game)
+  public async Task<ActionResult<Game>> CreateGame([FromBody] Game data)
   {
     // Access User Info or throw error
     var userInfo = await _auth0.GetUserInfoAsync<Account>(HttpContext);
@@ -25,6 +25,7 @@ public class GamesController : ControllerBase
       throw new Exception("Cannot Access Account. Relogin and try again.");
     }
 
-    return game;
+    Game game = _gamesServ.CreateGame(data, userInfo);
+    return Ok(game);
   }
 }

@@ -8,4 +8,13 @@ public class GamesService
   {
     _gamesRepo = gamesRepo;
   }
+
+  public Game CreateGame(Game data, Account userInfo)
+  {
+    data.CreatorId = userInfo.Id;
+
+    Game game = _gamesRepo.CreateGame(data);
+    game.Creator = userInfo;
+    return game;
+  }
 }
