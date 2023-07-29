@@ -13,4 +13,18 @@ public class GamesController : ControllerBase
     _auth0 = auth0;
     _gamesServ = gamesServ;
   }
+
+  [Authorize]
+  [HttpPost]
+  public async Task<ActionResult<Game>> CreateGame([FromBody] Game game)
+  {
+    // Access User Info or throw error
+    var userInfo = await _auth0.GetUserInfoAsync<Account>(HttpContext);
+    if (userInfo == null || userInfo.Id == null)
+    {
+      throw new Exception("Cannot Access Account. Relogin and try again.");
+    }
+
+    return game;
+  }
 }
