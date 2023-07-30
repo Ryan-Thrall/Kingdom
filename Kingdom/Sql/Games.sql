@@ -13,3 +13,5 @@ CREATE TABLE
         winnerId varchar(255) COMMENT 'Winners Id',
         mapId INT NOT NULL COMMENT 'Map Id'
     ) default charset utf8 COMMENT '';
+
+SELECT * FROM games;

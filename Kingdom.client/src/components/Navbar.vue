@@ -37,6 +37,11 @@
             How to play
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'Playground' }" class="btn text-platinum lighten-30 selectable">
+            Playground
+          </router-link>
+        </li>
       </ul>
       <!-- LOGIN COMPONENT HERE -->
       <Login />

@@ -43,6 +43,11 @@ const routes = [
     name: 'HowToPlay',
     component: loadPage('HowToPlayPage'),
   },
+  {
+    path: '/playground',
+    name: 'Playground',
+    component: loadPage('PlaygroundPage'),
+  },
 ]
 
 export const router = createRouter({
