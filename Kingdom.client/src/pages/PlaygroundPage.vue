@@ -3,22 +3,7 @@
     <div class="row justify-content-center">
       <div class="col-8 d-flex justify-content-around mt-5">
 
-        <div class="card bg-success">
-          <div class="card-body">
-            <h1>Farmers</h1>
-          </div>
-        </div>
-
-        <div class="card bg-success">
-          <div class="card-body">
-
-          </div>
-        </div>
-        <div class="card bg-success">
-          <div class="card-body">
-
-          </div>
-        </div>
+        <GroupCard v-for="g in groups" :key="g.id" :group="g"/>
 
       </div>
     </div>
@@ -28,9 +13,14 @@
 
 
 <script>
+import { computed } from 'vue';
+import { AppState } from '../AppState.js';
+
 export default {
   setup() {
-    return {}
+    return {
+      groups: computed(() => AppState.groups),
+    }
   }
 }
 </script>
