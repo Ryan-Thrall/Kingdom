@@ -11,12 +11,12 @@
 
 
 <script>
-import { Group } from '../models/Group.js';
+// import { Group } from '../models/Group.js';
 
 export default {
   props: {
     group: {
-      type: Group,
+      type: Object,
       required: true
     },
   },
