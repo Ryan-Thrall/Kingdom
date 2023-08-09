@@ -3,9 +3,9 @@
       <div class="card-body">
         <h1>{{city.name}}</h1>
         <h4>Population: {{ city.pop }}</h4>
-        <h4>Wealth: {{ city.wealth }}</h4>
+        <!-- <h4>Wealth: {{ city.wealth }}</h4> -->
         <h4>Alliance: {{ alliance }}</h4>
-        <h4>stability: {{ city.stability - unrest }}</h4>
+        <h4>Stability: {{ city.stability - unrest }}</h4>
 
       </div>
     </div>
