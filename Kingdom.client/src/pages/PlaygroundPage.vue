@@ -1,34 +1,13 @@
 <template>
   <div class="container-fluid">
     <div class="row justify-content-center">
-      <div class="col-2">
-        <h1>Treasury: {{ treasury }}</h1>
-      </div>
 
-      <div class="col-8 d-flex justify-content-center">
-        <h1>Turn: {{turn}}</h1>
-      </div>
-
-      <div class="col-2">
-        <h1>Money: {{ rebelMoney }}</h1>
+      <!-- Anger Meters -->
+      <div class="col-12">
+        
       </div>
 
 
-    </div>
-
-
-    <div class="row justify-content-center">
-      <div class="col-6 d-flex justify-content-around mt-5">
-        <GroupCard v-for="g in groups" :key="g.id" :group="g"/>
-        <!-- <h1>{{cities}}</h1> -->
-      </div>
-
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-6 d-flex justify-content-around mt-5">
-        <CityCard v-for="c in cities" :key="c.id" :city="c"/>
-      </div>
     </div>
 
   </div>
